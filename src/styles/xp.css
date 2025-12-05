@@ -185,25 +185,26 @@ body {
   bottom: 0;
   left: 0;
   right: 0;
-  height: 28px;
-  background-color: var(--xp-taskbar-bg);
-  border-top: 2px solid;
-  border-color: var(--xp-button-highlight) var(--xp-button-dark-shadow) var(--xp-button-dark-shadow) var(--xp-button-highlight);
+  height: 32px;
+  background: linear-gradient(180deg, #4c7fd5 0%, #2f5faf 55%, #23458c 100%);
+  border-top: 1px solid #7fa4ff;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.45), inset 0 2px 0 rgba(255, 255, 255, 0.25);
   display: flex;
   align-items: center;
-  gap: 2px;
-  padding: 2px;
+  gap: 4px;
+  padding: 3px 6px;
   font-family: 'MS Sans Serif', Arial, sans-serif;
   font-size: 11px;
   z-index: 9999;
+  color: #ffffff;
 }
 
 .xp-start-button {
-  background: linear-gradient(180deg, #3b9c3b 0%, #2a7a2a 50%, #3b9c3b 100%);
-  color: white;
+  background: linear-gradient(180deg, #4fb648 0%, #3d8f33 45%, #2b6a20 100%);
+  color: #ffffff;
   border: 2px solid;
-  border-color: #ffffff #0b4d0b #0b4d0b #ffffff;
-  padding: 2px 14px 2px 10px;
+  border-color: #ffffff #0c430c #0c430c #ffffff;
+  padding: 2px 16px 2px 12px;
   font-weight: bold;
   cursor: pointer;
   user-select: none;
@@ -212,53 +213,83 @@ body {
   display: flex;
   align-items: center;
   gap: 6px;
-  text-transform: capitalize;
+  text-transform: lowercase;
+  letter-spacing: 0.5px;
+  border-radius: 4px 12px 12px 4px;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6);
 }
 
 .xp-start-button:active {
-  border-color: #0b4d0b #ffffff #ffffff #0b4d0b;
+  border-color: #0c430c #ffffff #ffffff #0c430c;
+  box-shadow: inset 0 1px 0 rgba(0, 0, 0, 0.2);
+}
+
+.xp-start-button-logo {
+  font-size: 14px;
+  line-height: 1;
+}
+
+.xp-start-button-text {
+  font-size: 12px;
 }
 
 .xp-taskbar-items {
   display: flex;
-  gap: 2px;
+  gap: 4px;
   flex: 1;
   overflow-x: auto;
+  padding: 0 6px;
 }
 
 .xp-taskbar-item {
-  background-color: var(--xp-button-face);
-  border: 2px solid;
-  border-color: var(--xp-button-highlight) var(--xp-button-dark-shadow) var(--xp-button-dark-shadow) var(--xp-button-highlight);
-  padding: 2px 8px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.65) 0%, rgba(211, 228, 255, 0.4) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  padding: 4px 12px;
   cursor: pointer;
   user-select: none;
   font-size: 11px;
   white-space: nowrap;
-  max-width: 150px;
+  max-width: 170px;
   overflow: hidden;
   text-overflow: ellipsis;
   display: flex;
   align-items: center;
-  gap: 4px;
+  gap: 6px;
+  color: #0a246a;
+  border-radius: 3px;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6), inset 0 -1px 0 rgba(0, 0, 0, 0.15);
 }
 
-.xp-taskbar-item:active {
-  border-color: var(--xp-button-dark-shadow) var(--xp-button-highlight) var(--xp-button-highlight) var(--xp-button-dark-shadow);
+.xp-start-icon{
+  width: 20px;
+  height: 20px;
+  object-fit: contain;   /* keeps proportions without cutting */
+  margin-right: 6px;
+  image-rendering: pixelated;   /* gives XP retro look */
+  background: transparent;
+}
+
+.xp-taskbar-item:hover {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.85) 0%, rgba(206, 225, 255, 0.7) 100%);
 }
 
 .xp-taskbar-item.active {
-  border-color: var(--xp-button-dark-shadow) var(--xp-button-highlight) var(--xp-button-highlight) var(--xp-button-dark-shadow);
+  background: linear-gradient(180deg, #fff9d2 0%, #f7d776 100%);
+  border-color: #f2c557;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.7), inset 0 -1px 0 rgba(0, 0, 0, 0.2);
 }
 
 .xp-taskbar-clock {
-  margin-left: auto;
-  padding: 2px 8px;
-  border: 2px solid;
-  border-color: var(--xp-button-dark-shadow) var(--xp-button-highlight) var(--xp-button-highlight) var(--xp-button-dark-shadow);
-  background-color: var(--xp-button-face);
+  display: flex;
+  align-items: center;
+  padding: 2px 10px;
+  border-radius: 3px;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.4) 0%, rgba(200, 219, 255, 0.2) 100%);
+  color: #ffffff;
   font-size: 11px;
   user-select: none;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5);
 }
 
 /* XP Start Menu */
